@@ -563,6 +563,7 @@ async def main():
     current_run_task: asyncio.Task | None = None
 
     while True:
+        print("Provide the user instruction to generate scenarios: ", end="", flush=True)
         try:
             raw = await loop.run_in_executor(None, sys.stdin.readline)
         except (EOFError, OSError):
